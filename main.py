@@ -21,8 +21,8 @@ thread1.start()
 thread2 = Thread(target=read_ultrasonic,args=[stop_condition,picar],daemon=True)
 thread2.start()
 
-#thread3 = Thread(target=read_grayscale,args=[stop_condition,picar],daemon=True)
-#thread3.start()
+thread3 = Thread(target=read_grayscale,args=[stop_condition,picar],daemon=True)
+thread3.start()
 
 thread1.join() #block main thread until thread1 terminates
 
